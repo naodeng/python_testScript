@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Test Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<style>
+body {
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+* {
+    word-break: break-all;
+}
+table, td, th, .dataid {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    background: #fff;
+}
+section {
+    background: rgba(0, 0, 0, 0.05);
+    margin: 2ex;
+    padding: 1ex;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+h1 {
+    font-size: 130%;
+}
+h2 {
+    font-size: 120%;
+}
+h3 {
+    font-size: 100%;
+}
+h4 {
+    font-size: 85%;
+}
+h1, h2, h3, h4, a[href] {
+    cursor: pointer;
+    color: #0074d9;
+    text-decoration: none;
+}
+h3 strong, a.failed {
+    color: #ff4136;
+}
+.failed {
+    color: #ff4136;
+}
+a.success {
+    color: #3d9970;
+}
+pre {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono', 'Monaco',
+                 'Courier New', monospace;
+}
+
+.test-details,
+.traceback {
+    display: none;
+}
+section:target .test-details {
+    display: block;
+}
+
+</style>
+</head>
+<body>
+    <h1>Overview</h1>
+    <section>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th class="failed">Fail</th>
+                <th>Error</th>
+                <th>Skip</th>
+                <th>Success</th>
+                <th>Total</th>
+            </tr>
+                <tr>
+                    <td>test.test_doubanSearch</td>
+                    <td class="failed">51</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>51</td>
+                </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td class="failed">51</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>51</td>
+            </tr>
+        </table>
+    </section>
+    <h1>Failure details</h1>
+            <section>
+                <h2>test.test_doubanSearch (51 failures, 0 errors)</h2>
+                <div>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 0, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=0&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 0, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=0&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 15, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=15&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 15, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=15&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 30, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=30&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 30, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=30&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 45, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=45&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 45, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=45&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 60, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=60&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 60, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=60&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 75, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=75&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 75, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=75&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 90, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=90&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 90, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=90&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 105, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=105&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 105, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=105&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 120, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=120&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 120, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=120&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_page">
+                            <h3>test_page: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 135, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=135&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 15, "start": 135, "q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=15&start=135&q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_combination">
+                            <h3>test_param_combination: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "", "tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=&tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "", "tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=&tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_combination">
+                            <h3>test_param_combination: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "刘德华", "tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%88%98%E5%BE%B7%E5%8D%8E&tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "刘德华", "tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%88%98%E5%BE%B7%E5%8D%8E&tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_combination">
+                            <h3>test_param_combination: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "", "tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=&tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "", "tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=&tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_combination">
+                            <h3>test_param_combination: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "刘德华", "tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%88%98%E5%BE%B7%E5%8D%8E&tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "刘德华", "tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%88%98%E5%BE%B7%E5%8D%8E&tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": null, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": null, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 20, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=20&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 20, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=20&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 10, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=10&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 10, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=10&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 100, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=100&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 100, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=100&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 0, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=0&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": 0, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=0&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_count">
+                            <h3>test_param_count: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": -10, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=-10&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"count": -10, "tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?count=-10&tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "战狼"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E6%88%98%E7%8B%BC HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "战狼"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E6%88%98%E7%8B%BC HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "avatar"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=avatar HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "avatar"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=avatar HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "2046"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=2046 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "2046"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=2046 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "~!@#$%^&*()"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=~%21%40%23%24%25%5E%26%2A%28%29 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "~!@#$%^&*()"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=~%21%40%23%24%25%5E%26%2A%28%29 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_q">
+                            <h3>test_param_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_start">
+                            <h3>test_param_start: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_start">
+                            <h3>test_param_start: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 0}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 0}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_start">
+                            <h3>test_param_start: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 10}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=10 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 10}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=10 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_start">
+                            <h3>test_param_start: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 100}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=100 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": 100}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=100 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_start">
+                            <h3>test_param_start: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": -1}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=-1 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰", "start": -1}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0&start=-1 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "action"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=action HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "action"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=action HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "2046"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=2046 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "2046"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=2046 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "~!@#$%^&*()"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=~%21%40%23%24%25%5E%26%2A%28%29 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "~!@#$%^&*()"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=~%21%40%23%24%25%5E%26%2A%28%29 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": null}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_param_tag">
+                            <h3>test_param_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": ""}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag= HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "白夜追凶"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E7%99%BD%E5%A4%9C%E8%BF%BD%E5%87%B6 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "白夜追凶"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E7%99%BD%E5%A4%9C%E8%BF%BD%E5%87%B6 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "大话西游"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%A4%A7%E8%AF%9D%E8%A5%BF%E6%B8%B8 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "大话西游"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%A4%A7%E8%AF%9D%E8%A5%BF%E6%B8%B8 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "张艺谋"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%BC%A0%E8%89%BA%E8%B0%8B HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "张艺谋"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%BC%A0%E8%89%BA%E8%B0%8B HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰,吴孟达"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0%2C%E5%90%B4%E5%AD%9F%E8%BE%BE HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰,吴孟达"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0%2C%E5%90%B4%E5%AD%9F%E8%BE%BE HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "张艺谋,巩俐"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%BC%A0%E8%89%BA%E8%B0%8B%2C%E5%B7%A9%E4%BF%90 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "张艺谋,巩俐"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%BC%A0%E8%89%BA%E8%B0%8B%2C%E5%B7%A9%E4%BF%90 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰,大话西游"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0%2C%E5%A4%A7%E8%AF%9D%E8%A5%BF%E6%B8%B8 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "周星驰,大话西游"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E5%91%A8%E6%98%9F%E9%A9%B0%2C%E5%A4%A7%E8%AF%9D%E8%A5%BF%E6%B8%B8 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_q">
+                            <h3>test_q: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "白夜追凶,潘粤明"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E7%99%BD%E5%A4%9C%E8%BF%BD%E5%87%B6%2C%E6%BD%98%E7%B2%A4%E6%98%8E HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"q": "白夜追凶,潘粤明"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?q=%E7%99%BD%E5%A4%9C%E8%BF%BD%E5%87%B6%2C%E6%BD%98%E7%B2%A4%E6%98%8E HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "科幻"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%A7%91%E5%B9%BB HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "科幻"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%A7%91%E5%B9%BB HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "动作"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%8A%A8%E4%BD%9C HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "犯罪"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%8A%AF%E7%BD%AA HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "犯罪"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%8A%AF%E7%BD%AA HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "科幻,喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%A7%91%E5%B9%BB%2C%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "科幻,喜剧"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E7%A7%91%E5%B9%BB%2C%E5%96%9C%E5%89%A7 HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                        <section id="test.test_doubanSearch:test_tag">
+                            <h3>test_tag: <strong>exceptions.AssertionError</strong></h3>
+                            <div class="test-details">
+                                <h4>Traceback</h4>
+                                <pre class="traceback">Traceback (most recent call last):
+  File "c:\python27\lib\unittest\case.py", line 329, in run
+    testMethod()
+  File "c:\python27\lib\site-packages\nose\case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "D:\Github\python_test_Script\test.py", line 109, in search
+    assert False, 'Invoke Error.Code:\t{0}'.format(code)
+AssertionError: Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "动作,犯罪"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%8A%A8%E4%BD%9C%2C%E7%8A%AF%E7%BD%AA HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------
+</pre>
+                                <h4>Details</h4>
+                                <pre>Invoke Error.Code:	112
+-------------------- >> begin captured stdout << ---------------------
+Search Params:
+{"tag": "动作,犯罪"}
+Search Response:
+{
+    "msg": "rate_limit_exceeded2: 58.49.117.116", 
+    "code": 112, 
+    "request": "GET /v2/movie/search"
+}
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): api.douban.com
+urllib3.connectionpool: DEBUG: https://api.douban.com:443 "GET /v2/movie/search?tag=%E5%8A%A8%E4%BD%9C%2C%E7%8A%AF%E7%BD%AA HTTP/1.1" 400 92
+--------------------- >> end captured logging << ---------------------</pre>
+                            </div>
+                        </section>
+                </div>
+            </section>
+
+    <h1>All tests</h1>
+    <section>
+        <h2>test.test_doubanSearch (51 failures, 0 errors)</h2>
+        <ul>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_page">test_page</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_combination">test_param_combination</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_combination">test_param_combination</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_combination">test_param_combination</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_combination">test_param_combination</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_count">test_param_count</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_q">test_param_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_start">test_param_start</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_start">test_param_start</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_start">test_param_start</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_start">test_param_start</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_start">test_param_start</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_param_tag">test_param_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_q">test_q</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+                <li><a class="failed" href="#test.test_doubanSearch:test_tag">test_tag</a></li>
+        </ul>
+    </section>
+</body>
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('h1, h2, h3, h4'), function(el) {
+        el.addEventListener('click', function() {
+            el.nextElementSibling.style.display = document.defaultView.getComputedStyle(el.nextElementSibling).display == 'none' ? 'block' : 'none';
+        })
+    })
+</script>
+</html>
