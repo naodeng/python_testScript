@@ -10,7 +10,7 @@ def time1():  # datetime.datetime.now()获取的是当前日期
     time.sleep(1)
     end = datetime.datetime.now()
     t1 = bytes((end - start).seconds)
-    print ('第一种方法脚本运行时间为:' + t1)
+    print('第一种方法脚本运行时间为:' + t1)
 
 
 def time2():  # time.time()获取自纪元以来的当前时间（以秒为单位)
@@ -19,7 +19,7 @@ def time2():  # time.time()获取自纪元以来的当前时间（以秒为单�
     end = time.time()
     # t2 = bytes(end - start)
     t2 = "{:.0f}".format(end - start)
-    print ('第二种方法脚本运行时间为:' + t2)
+    print('第二种方法脚本运行时间为:' + t2)
 
 
 def time3():  # time.clock()CPU的执行时间
@@ -28,7 +28,7 @@ def time3():  # time.clock()CPU的执行时间
     end = time.clock()
     # t3 = bytes(end - start)
     t3 = "{:.0f}".format(end - start)
-    print ('第三种方法脚本运行时间为:' + t3)
+    print('第三种方法脚本运行时间为:' + t3)
 
 
 if __name__ == '__main__':

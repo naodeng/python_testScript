@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
-import script_time,datetime
+import script_time, datetime
 
 
 # 获取时间戳
@@ -29,11 +28,11 @@ def dateFormate():
     print(dateFormate)
 
     currentTime = datetime.datetime.now()
-    print('before : %s after : %s' %(currentTime,currentTime.strftime("%Y%m%d%H%M%S")))
+    print('before : %s after : %s' %(currentTime, currentTime.strftime("%Y%m%d%H%M%S")))
 
     date_formate = "%Y%m%d%H%M%S"
     date_string = '20190125102536'
-    print('before : %s after : %s' %(date_string,datetime.datetime.strptime(date_string, date_formate)))
+    print('before : %s after : %s' % (date_string, datetime.datetime.strptime(date_string, date_formate)))
 
 
 if __name__ == '__main__':

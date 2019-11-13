@@ -17,8 +17,8 @@ def md5_test():
     key = 'python'
     # 加密后的值
     key_md5 = md5(key)
-    print('MD5加密前：'+ key)
-    print('MD5加密后：'+ key_md5)
+    print('MD5加密前：' + key)
+    print('MD5加密后：' + key_md5)
 
 
 if __name__ == '__main__':
