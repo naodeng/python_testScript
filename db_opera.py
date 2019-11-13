@@ -18,10 +18,10 @@ try:
     for row in results:
         comments = row[1]
         ip = row[3]
-    print ("python1=%s,python2=%s" % \
+    print("python1=%s,python2=%s" % \
             ("python1", "python2"))
 except:
-    print "Error: 没查询到数据"
+    print("Error: 没查询到数据")
 
 
 # 关闭数据库连接
